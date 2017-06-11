@@ -1,0 +1,54 @@
+// 侧边导航栏
+
+.nav{
+  // 轮廓样式
+  width: $nav-width;
+  display: inline-block;
+
+  // 内部样式
+  padding-right: $nav-padding-right;
+}
+
+  // logo
+  .logo{
+    width: $logo-width;
+    height: $logo-height;
+    display: block;
+
+    //内部样式
+    text-align: center;
+
+    margin-bottom: 16px;
+  }
+  .logo img{
+    width: $logo-width;
+    height: $logo-height;
+    display: inline-block;
+  }
+
+  // item
+  .channel-item{
+    // 轮廓样式
+    width: $channel-item-width;
+    height: $channel-item-height;
+    display: block;
+
+    // 内部样式
+    text-align: center;
+    border-radius: 4px;
+    line-height: 40px;
+    color: $gray-dark;
+
+    @include vp-transition(color, $transition-time);
+    @include vp-transition(background, $transition-time);
+
+    &:hover{
+      color: $white;
+      background-color: $channel-item-bgColor;
+    }
+  }
+
+  .channel-item-first{
+    color: $white;
+    background-color: $channel-item-bgColor;
+  }

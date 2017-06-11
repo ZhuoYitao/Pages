@@ -1,0 +1,8 @@
+@mixin margin($pixel){
+  margin: $pixel;
+}
+
+@mixin transition-property($arg1, $arg2){
+  -webkit-transition-property: color,background-color;
+  transition-property: color,background-color;
+}

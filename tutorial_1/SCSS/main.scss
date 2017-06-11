@@ -1,0 +1,14 @@
+@import "variables";
+@import "auto-prefixer/prefixes";
+@import "mixins";
+
+@import "reset";
+
+@import "helper";
+
+// 每个component文件管理一个组件的外形（轮廓和内部）以及内部元素的外形和布局（layout）。
+@import "components/components";
+
+// 布局
+@import "layouts";
+@import "layouts_compotents";

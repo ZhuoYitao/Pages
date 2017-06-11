@@ -1,0 +1,57 @@
+// 组件自身
+  // 轮廓样式(e.g. 宽、高)
+  // 内部样式（e.g. 字体颜色）
+// 组件内部子元素
+  // 轮廓样式
+  // 内部样式
+  // 内部元素的布局
+
+// 组件自身的样式
+.header{
+  // 轮廓
+  width: 100%;
+  height: $header-height;
+  display: block;
+
+  // 内部
+  background-color: $header-bg-color;
+  font: $font-size-base/1 $font-family-base;
+}
+
+  // ul
+  .header-contents{
+    height: 100%;
+
+    // 轮廓
+    display: inline-block;
+    padding: 0 0;
+  }
+    // li
+    .header-contents-li{
+      // 轮廓
+      display: inline-block;
+      border-right: 1px #fff solid;
+      height: 100%;
+
+      // 内部
+      padding: $header-content-padding_top $header-content-padding_left;
+      font: $font-size-base/$font-size-base;
+    }
+
+    // 登录栏
+    .header-content-login{
+      // 轮廓
+      border-right: none;
+
+      // 内部
+      background: $header-login-bg-color;
+    }
+
+      // li a
+      .header-content{
+        // 轮廓
+        display: inline-block;
+
+        // 内部
+        color: $gray-lighter;
+      }

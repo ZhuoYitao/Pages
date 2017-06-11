@@ -1,0 +1,41 @@
+// 跟布局相关的类
+
+// 浮动相关
+  // 清除浮动
+  // For modern browsers
+  // 1. The space content is one way to avoid an Opera bug when the
+  //    contenteditable attribute is included anywhere else in the document.
+  //    Otherwise it causes space to appear at the top and bottom of elements
+  //    that are clearfixed.
+  // 2. The use of `table` rather than `block` is only necessary if using
+  //    `:before` to contain the top-margins of child elements.
+  //
+  // Source: http://nicolasgallagher.com/micro-clearfix-hack/
+  .clearFloat {
+    &:before,
+    &:after {
+      content: " "; // 1
+      display: table; // 2
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  // 浮动
+  .left{
+    float: left;
+  }
+
+  .right{
+    float: right;
+  }
+
+// position相关
+
+// margin相关
+  .margin-auto{
+    // 使用这个类的话需要先保证元素已经被赋予宽度
+    margin: auto;
+  }
+

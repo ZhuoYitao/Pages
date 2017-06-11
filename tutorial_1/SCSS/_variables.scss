@@ -1,0 +1,86 @@
+// 这个文件记录了项目里用到的变量。这个文件参考了bootstrap的_variables.scss文件。
+//（https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss）
+
+// 字体相关变量
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default; // 使用!default后变量不会被再次赋值
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 14px !default;
+
+$font-size-large: ceil($font-size-base * 1.25) !default; // ceil是向上取整函数, 结果大概是18px
+$font-size-small: ceil($font-size-base * 0.85) !default; // ~ 12px
+
+$font-size-h1: floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2: floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$line-height-base: 1.4 !default; // 20/14
+$line-height-computed: floor($font-size-base * $line-height-base) !default; // ~20px
+
+// 颜色相关变量
+$dark: #000 !default;
+$gray-darker: lighten($dark, 13.5%) !default; // #222
+$gray-dark: lighten($dark, 20%) !default;   // #333
+$gray: lighten($dark, 33.5%) !default; // #555
+$gray-light: lighten($dark, 46.7%) !default; // #777
+$gray-lighter: lighten($dark, 93.5%) !default; // #eee
+
+$white: #fff;
+
+$brand-primary: darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
+
+$body-bg: #fff !default;
+$text-color: $gray-dark !default;
+
+$link-color: $brand-primary !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+
+// 宽高度
+$body-min-width: 1220px !default;
+
+// 动画
+$transition-time: 0.2s;
+
+// 组件专属变量
+// header
+$header-height: 30px !default;
+$header-padding-top: 0 !default;
+$header-padding-left: 0 !default;
+$header-bg-color: $gray-darker !default;
+$header-login-bg-color: #d9534f !default;
+$header-li-border-color: #fff !default;
+
+  // header-content
+  $header-content-padding_top: 5px !default;
+  $header-content-padding_left: 10px !default;
+
+// nav
+$nav-width: 140px;
+$nav-padding-right: 12px;
+  // logo
+  $logo-width: 110px;
+  $logo-height: 28px;
+
+  // item
+  $channel-item-width: 110px;
+  $channel-item-height: 40px;
+  $channel-item-bgColor: #d9534f;
+
+// newsContainer
+$newsContainer-width: 660px;
+
+// image player
+$imagePlayer-width: 660px;
+$imagePlayer-height: 300px;
+  // image player sidebar
+  $imagePlayer-sidebar-width: 60px;
+    $imagePlayer-sidebar-item-width: 36px;
