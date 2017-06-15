@@ -10,3 +10,24 @@
   vertical-align: top;
 }
 
+.newsContainer{
+  margin: 0 25px;
+}
+
+// news list
+.news-information{
+  position: relative;
+}
+.news-footerBox{
+  position: absolute;
+  bottom: 0;
+}
+.news-list{
+  margin-top: 20px;
+}
+.news-thumbnail{
+  float: left;
+}
+.news-information{
+  float: right;
+}

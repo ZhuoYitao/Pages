@@ -1,0 +1,35 @@
+// 右边栏的广告栏
+
+.adv{
+  margin-bottom: 20px;
+
+  width: 340px;
+  height: 300px;
+
+  padding: 20px;
+
+  background-color: #f5f6f7;
+}
+.adv a{
+  text-decoration: none;
+}
+
+.adv-img{
+  width: 300px;
+  height: 180px;
+}
+
+.adv-title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.adv-advertiser, .adv-hint{
+  margin-right: 20px;
+
+  font-size: 12px;
+}
+.adv-hint{
+  color: #428bca;
+}

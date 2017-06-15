@@ -1,0 +1,14 @@
+.links{
+  @extend .hotNews
+}
+.links-title{
+  @extend .hotNews-title
+}
+.links-item{
+  @extend .more-item
+}
+.links-item a{
+  color: #777;
+  font-size: 14px;
+  line-height: 1.4;
+}

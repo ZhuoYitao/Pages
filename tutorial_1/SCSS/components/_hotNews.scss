@@ -1,0 +1,38 @@
+// 24小时热闻
+
+.hotNews{
+  margin-bottom: 20px;
+
+  width: 340px;
+
+  padding: 20px;
+
+  background-color: #f5f6f7;
+
+  border-top: 2px solid #d9534f;
+}
+.hotNews-title{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.hotNews-item{
+  padding: 10px 0;
+  border-bottom: 1px solid #222222;
+}
+.hotNews-img{
+  display: inline-block;
+  float: left;
+
+  width: 60px;
+  height: 60px;
+}
+.hotNews-img:hover{
+  width: 70px;
+  height: 70px;
+}
+.hotNews-newsTitle{
+  float: right;
+  display: inline-block;
+
+  width: 200px;
+}

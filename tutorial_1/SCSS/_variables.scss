@@ -64,7 +64,7 @@ $header-li-border-color: #fff !default;
   $header-content-padding_left: 10px !default;
 
 // nav
-$nav-width: 140px;
+$nav-width: 110px;
 $nav-padding-right: 12px;
   // logo
   $logo-width: 110px;
@@ -82,5 +82,17 @@ $newsContainer-width: 660px;
 $imagePlayer-width: 660px;
 $imagePlayer-height: 300px;
   // image player sidebar
+  $imagePlayer-sidebar-padding-top: 7px;
   $imagePlayer-sidebar-width: 60px;
     $imagePlayer-sidebar-item-width: 36px;
+
+// news list
+$news-list-item-width: 660px;
+$news-list-item-height: 110px;
+$news-thumbnail-width: 160px;
+$news-thumbnail-height: 100px;
+$news-author-img-width: 20px;
+$news-author-img-height: 20px;
+
+$news-information-padding-top: 20px;
+$news-information-padding-left: 20px;

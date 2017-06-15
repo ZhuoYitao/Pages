@@ -53,10 +53,14 @@
     height: 100%;
     display: inline-block;
 
-    padding: 7px 0;
+    padding: $imagePlayer-sidebar-padding-top 0;
     background-color: $gray-darker;
 
     float: right;
+
+    ul{
+      height: $imagePlayer-height - (2 * $imagePlayer-sidebar-padding-top);
+    }
   }
 
     .imagePlayer-sidebar-item{

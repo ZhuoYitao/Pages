@@ -1,0 +1,105 @@
+// li
+.news-list{
+  display: inline-block;
+  float: left;
+}
+
+.news-list-item{
+  width: $news-list-item-width;
+  height: $news-list-item-height;
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+// thumbnail
+.news-thumbnail{
+  width: $news-thumbnail-width;
+  height: $news-list-item-height;
+  display: inline-block;
+
+}
+
+// 标题等新闻信息
+.news-information{
+  width: $news-list-item-width - $news-thumbnail-width;
+  height: $news-list-item-height;
+  display: inline-block;
+
+  padding: 0 0 0 $news-information-padding-left;
+}
+
+.news-title {
+  display: block;
+
+  font-size: 20px;
+  color: $dark;
+
+  margin-top: 10px;
+}
+
+.news-footerBox{
+  width: $news-list-item-width - $news-thumbnail-width - $news-information-padding-left;
+
+  vertical-align: bottom;
+}
+
+.news-author-img{
+  width: $news-author-img-width;
+  height: $news-author-img-height;
+  display: inline-block;
+
+  vertical-align: bottom;
+
+  img{
+    width: $news-author-img-width;
+    height: $news-author-img-height;
+    display: inline-block;
+  }
+}
+
+.news-detail{
+  display: inline-block;
+
+  float: left;
+
+  a{
+    color: $dark;
+  }
+}
+
+.news-detail-box{
+  height: 20px;
+  display: inline-block;
+
+  padding: 0 5px;
+  line-height: 18px;
+  border: 1px solid #222222;
+}
+
+.news-dislike{
+  display: inline-block;
+
+  cursor: pointer;
+
+  float: right;
+}
+.news-dislike:hover .dislike-content{
+  display: inline-block;
+}
+.dislike-content{
+  height: 20px;
+  display: none;
+
+  line-height: 20px;
+  padding: 0 5px;
+  background-color: #d9534f;
+  color: $white;
+}
+#loading-placeholder{
+  width: 100%;
+  height: 50px;
+
+  text-align: center;
+  color: #d9534f;
+}

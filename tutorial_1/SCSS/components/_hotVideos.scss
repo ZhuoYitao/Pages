@@ -1,0 +1,58 @@
+.hotVideos{
+  @extend .hotNews
+}
+.hotVideos-title{
+  @extend .hotNews-title
+}
+.hotVideos-item{
+  padding: 10px 0;
+  border-bottom: 1px solid #222222;
+}
+.hotVideos-img{
+  float: right;
+
+  width: 120px;
+  height: 70px;
+}
+.hotVideos-img:hover{
+  width: 130px;
+  height: 80px;
+}
+.hotVideo-inf{
+  float: left;
+  position: relative;
+
+  width: 180px;
+  height: 70px;
+}
+.hotVideo-inf-title{
+}
+.hotVideo-inf-record{
+  position: absolute;
+  bottom: 0;
+
+  font-size: 14px;
+  color: grey;
+}
+.hotVideos-v{
+  display: inline-block;
+  float: right;
+  position: relative;
+
+  width: 120px;
+  height: 70px;
+}
+.hotVideos-tag{
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+
+  padding: 3px 6px;
+
+  border-radius: 10px;
+
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+
+  font-size: 12px;
+}

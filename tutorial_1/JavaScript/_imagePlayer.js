@@ -6,8 +6,6 @@ var ImagePlayer = function (){
     var sidebar_items = $(".imagePlayer-sidebar-item");
     var images = $(".imagePlayer-image");
 
-    console.log(sidebar_items.eq(0).css("background-color"));
-
     for(let i=0; i<sidebar_items.length; i++){
         sidebar_items[i].onmouseover = function(){
             if(this.value !== current_selected){
@@ -20,8 +18,6 @@ var ImagePlayer = function (){
                 images.eq(this.value).css("display", "inline-block");
 
                 current_selected = this.value;
-
-                console.log(current_selected);
             }
         }
     }
@@ -35,7 +31,6 @@ var ImagePlayer = function (){
         images.eq(next_selected).css("display", "inline-block");
 
         current_selected = next_selected;
-        console.log(current_selected);
     }, 3500);
 
     // TODO: hover时暂停自动换图

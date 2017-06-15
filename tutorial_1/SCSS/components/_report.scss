@@ -1,0 +1,27 @@
+.report{
+  text-align: center;
+
+  padding: 20px 10px;
+
+  background-color: #f5f6f7;
+
+  margin-bottom: 20px;
+}
+.report-image-holder{
+  width: 57px;
+  height: 50px;
+}
+.report-image{
+  width: 57px;
+  height: 50px;
+  display: inline-block;
+}
+.report-content{
+  display: inline-block;
+
+  margin-left: 10px;
+  h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

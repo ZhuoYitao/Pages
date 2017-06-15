@@ -1,0 +1,18 @@
+// 右侧栏的"更多"
+
+.more{
+  @extend .hotNews
+}
+.more-title{
+  @extend .hotNews-title
+}
+.more-item{
+  float: left;
+  width: 65px;
+  margin: 20px 5px 0 5px;
+}
+.more-item a{
+  color: #222222;
+  font-size: 14px;
+  line-height: 1.4;
+}
