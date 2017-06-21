@@ -8,7 +8,7 @@
 特色：轮播图、下拉至页末时自动加载。
 
 ## Faction
-仿制页面：https://pixelarity.com/faction （导航栏中的Elements分支）
+仿制页面：https://pixelarity.com/faction （具体而言，仿了导航栏中的Elements对应的页面）
 
 预览地址：https://zhuoyitao.github.io/Pages/faction/
 
