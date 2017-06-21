@@ -1,0 +1,44 @@
+// 这里记录了跟按钮有关的类
+// 用法：
+// 普通按钮：
+// <a href="#" class="btn btn-normal btn-normal-hover">Normal</a>
+// 被选中的按钮：
+// <a href="#" class="btn btn-selected btn-selected-hover">Normal</a>
+// 不能按的按钮：
+// <a href="javascript:void(0);" class="btn btn-normal btn-disabled">Normal</a>
+
+// 按钮的共同特征
+.btn{
+  display: inline-block;
+  width: 100%;
+
+  font-size: 0.75em;
+  padding: 1em 1.5em;
+  border-radius: 2em;
+  text-decoration: none;
+  text-align: center;
+}
+// 普通按钮
+.btn-normal{
+  color: $base-font-color;
+  border: 1px solid $base-font-color;
+}
+.btn-normal-hover:hover{
+  color: $base-color;
+  border-color: $base-color;
+}
+// 被选中的按钮
+.btn-selected{
+  color: white;
+  background-color: $base-color;
+  border: 1px solid $base-color;
+}
+.btn-selected-hover:hover{
+  background-color: $base-color-light;
+  border-color: $base-color-light;
+}
+// 不能按的按钮（需要保证a元素的href="javascript:void(0)"）
+.btn-disabled{
+  opacity: 0.3;
+  cursor: default;
+}

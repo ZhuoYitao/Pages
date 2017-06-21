@@ -1,0 +1,80 @@
+.footer{
+}
+// About us和Contact us
+.us{
+  border-bottom: 1px solid $border-color;
+}
+// About us中一个人的信息（包括图片）
+.us-person{
+  height: 6em;
+}
+// 名字和详情
+.person-detail{
+  float: left;
+
+  padding: 1em 0;
+  line-height: 2em;
+}
+// 个人名字
+.us-name{
+  font-weight: bold;
+}
+// 个人详情
+.us-spec{
+  font-weight: lighter;
+}
+
+.contact-us{
+  padding: 0 2em;
+}
+// 图标和信息
+.contact-item{
+  margin-bottom: 1em;
+}
+// 图标
+.contact-icon{
+  display: inline-block;
+  float: left;
+  margin-right: 1em;
+
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+  border-radius: 100%;
+  border: 1px solid $border-color;
+  text-align: center;
+}
+// 具体信息
+.contact-inf{
+  display: inline-block;
+  float: left;
+
+  height: 3em;
+  line-height: 1.5em;
+  padding: (1.5em / 2) 0;
+
+  a{
+    text-decoration: none;
+    color: inherit;
+
+    &:hover{
+      color: $base-color;
+    }
+  }
+}
+
+// 版权声明
+.declaration{
+  text-align: center;
+  font-weight: lighter;
+  padding-top: $footer-vPadding;
+}
+
+@media (min-width: ($screen-md - 1)){
+  .footer{
+    padding: $footer-vPadding 5em;
+  }
+  .about-us{
+    border-right: 1px solid $border-color;
+  }
+}

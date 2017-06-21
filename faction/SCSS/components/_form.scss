@@ -1,0 +1,102 @@
+.form {
+  input, select{
+    display: inline-block;
+
+    width: 100%;
+    height: $formElementHeight;
+    line-height: $formElementHeight;
+    background-color: $formEleBackColor;
+    border: 2px solid $formEleBorderColor;
+    outline: none;
+  }
+  input[type="text"], select{
+    padding: 0 $formElementHorPadding;
+    &:focus{
+      border-color: $base-color;
+    }
+  }
+
+  select{
+    // 1: // 去除边界的圆角
+    border-radius: 0; // 1
+    -moz-appearance: none; // 1
+    -webkit-appearance: none; // 1
+  }
+
+  // 单选框和复选框
+  input[type=radio],
+  input[type=checkbox] {
+    display: none;
+  }
+  // label元素与一个input元素绑定后（使用label的for属性），点击这个label就相当于点了这个input
+  label {
+    display: inline-block; // 为了能设置margin
+
+    cursor: pointer;
+    position: relative; // 为了设置label:before的位置
+    padding-left: 2em;
+    margin-right: 1em;
+  }
+  label:before {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    content: "";
+    font-size: 1em;
+    background-color: $formEleBackColor;
+    border: 2px solid $formEleBorderColor;
+    text-align: center;
+  }
+  input[type="radio"]+label:before {
+    border-radius: 8px;
+  }
+  // 设置点击后label（前置元素）的样式
+  input[type=radio]:checked+label:before, input[type=checkbox]:checked+label:before{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); // 阴影向右偏移多少，向下偏移多少，阴影有多大，阴影的颜色
+    border-color: $base-color;
+    background-color: $base-color;
+    color: white;
+  }
+  input[type=radio]:checked+label:before {
+  content: "\2022"; // 小圆点
+  }
+  input[type=checkbox]:checked+label:before{
+    content: "\2713"; // 对号
+  }
+
+  // 多行的文本输入框
+  textarea{
+    display: block;
+    resize: none;
+
+    width: 100%;
+    height: 10em;
+    padding: 1em;
+    outline: 0;
+    background-color: $formEleBackColor;
+    border: 2px solid $formEleBorderColor;
+
+    &:focus{
+      border-color: $base-color;
+    }
+  }
+}
+
+// 设置placholder的透明度
+::-webkit-input-placeholder { /* Chrome */
+  opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  opacity: 0.5;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  opacity: 0.5;
+}

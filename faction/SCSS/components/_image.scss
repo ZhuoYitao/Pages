@@ -1,0 +1,53 @@
+// 放图片的容器（例如div标签）
+// 只需要控制这个容器的大小和布局就可以决定图片的大小和布局
+.img-wrapper{
+  img{
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+  }
+}
+// 不同容器有不同的设定
+.img-wrapper-1{
+  height: 14em;
+  margin-bottom: 1em;
+}
+.img-wrapper-2{
+  height: 7em;
+  margin-bottom: 1em;
+}
+.img-wrapper-3{
+  float: left;
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 1em;
+
+  width: 6em;
+  height: 6em;
+}
+.img-wrapper-4{
+  float: right;
+  display: inline-block;
+  margin-left: 1em;
+  margin-bottom: 1em;
+
+  width: 6em;
+  height: 6em;
+}
+.img-wrapper-5{
+  float: left;
+  display: inline-block;
+  margin-right: 0.5em;
+
+  width: 6em;
+  height: 6em;
+  border-radius: 100%;
+
+  img{
+    border-radius: 100%;
+  }
+}
+.img-wrapper-6{
+  height: 100%;
+}

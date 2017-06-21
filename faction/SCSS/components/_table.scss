@@ -1,0 +1,39 @@
+// 基础的表格类
+.table{
+  // 1: reset里已经设置了
+  //display: block; // 1
+  //border-collapse: collapse; // 1
+  //border-spacing: 0; // 1
+  tbody{
+    tr:nth-child(odd){
+      background-color: rgba(144, 144, 144, 0.075);
+    }
+    tr:last-child{
+      background-color: transparent;
+      td{
+        border: none;
+      }
+    }
+  }
+  td{
+    border: none;
+    border-bottom: 1px solid $border-color;
+    text-align: center;
+    padding: 0.75em 0.75em;
+  }
+}
+// 表格类型一
+.table-default{
+  @extend .table;
+  td{
+    border: none;
+    border-bottom: 1px solid $border-color;
+  }
+}
+// 表格类型二
+.table-alternate{
+  @extend .table;
+  td{
+    border: 1px solid $border-color;
+  }
+}

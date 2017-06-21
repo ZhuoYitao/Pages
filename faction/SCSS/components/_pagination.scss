@@ -1,0 +1,39 @@
+// 分页栏
+.pagination{
+  font-size: 0.75em;
+  padding: 1em 0; // 用于撑开ul的高度。可是为什么ul的高度不能自动被a撑开？
+
+  @extend .clearFloat;
+  @extend .nav-like;
+
+  li{
+    float: left;
+    margin-right: 1em;
+    a{
+      color: $base-font-color;
+    }
+  }
+
+  // 上一页和下一页（按钮形状）
+  .prev, .next{
+    border: 1px solid $base-font-color;
+    border-radius: 2em;
+    padding: 1em 1.5em;
+  }
+
+  .btn-disabled{
+    @extend .btn-disabled;
+  }
+
+  .btn-enabled{
+    @extend .btn-normal-hover;
+  }
+
+  // 当前选中的页数
+  .pagination-selected{
+    background-color: $base-color;
+    color: white;
+    border-radius: 1em;
+    padding: 0 0.5em;
+  }
+}

@@ -1,0 +1,64 @@
+// 生成基础的列类
+@mixin make-grid-colunms($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}"){
+  @for $i from (2) through $grid-columns{
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}"; // 逐渐扩展list为所有列类的集合
+  }
+  #{$list}{
+    float: left;
+    //position: relative;
+    min-height: 1px;
+    padding-left: ceil(($grid-gutter-width / 2));
+    padding-right: floor(($grid-gutter-width / 2));
+  }
+}
+
+// 生成一个特定的列类
+@mixin calc-grid-column($index, $class, $type){
+  @if($type == width) and ($index > 0){
+    .col-#{$class}-#{$index}{
+      width: percentage(($index / $grid-columns));
+    }
+  }
+  //// push指向右偏移多少列
+  //@if($type == push) and ($index > 0){
+  //  .col-#{$class}-push-#{$index}{
+  //    left: percentage(($index / $grid-columns));
+  //  }
+  //}
+  //@if($type == push) and ($index == 0){
+  //  .col-#{$class}-push-#{$index}{
+  //    left: auto; // left的默认值就是auto
+  //  }
+  //}
+  //// pull指向左偏移
+  //@if($type == pull) and ($index > 0){
+  //  .col-#{$class}-pull-#{$index}{
+  //    right: percentage(($index / $grid-columns));
+  //  }
+  //}
+  //@if($type == pull) and ($index == 0){
+  //  .col-#{$class}-pull-#{$index}{
+  //    right: auto;
+  //  }
+  //}
+  @if($type == offset){
+    .col-#{$class}-offset-#{$index}{
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+// 循环得生成列类
+@mixin loop-grid-columns($columns, $class, $type){
+  @for $i from 0 through $columns{
+    @include calc-grid-column($i, $class, $type);
+  }
+}
+
+// 生成特定类别（xs, sm, md, lg）的列类
+@mixin make-grid($class){
+  @include loop-grid-columns($grid-columns, $class, width);
+  //@include loop-grid-columns($grid-columns, $class, pull);
+  //@include loop-grid-columns($grid-columns, $class, push);
+  @include loop-grid-columns($grid-columns, $class, offset);
+}

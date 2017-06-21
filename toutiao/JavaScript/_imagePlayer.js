@@ -23,7 +23,7 @@ var ImagePlayer = function (){
     }
 
     setInterval(function(){
-        var next_selected = (current_selected + 1) % 6;
+        var next_selected = (current_selected + 1) % images.length;
 
         sidebar_items[next_selected].style.backgroundColor = sidebar_items.eq(current_selected).css("background-color");
         sidebar_items[current_selected].style.backgroundColor = "transparent";

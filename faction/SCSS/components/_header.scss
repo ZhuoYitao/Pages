@@ -1,0 +1,153 @@
+#header{
+  margin-bottom: 4em;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 5em;
+  line-height: 5em;
+
+  padding: 0 2em;
+
+  background-color: #2ebfac;
+
+  color: white;
+  z-index: 1000; // 防止被其他元素挡住
+}
+.logo{
+  text-decoration: none;
+  font-size: 1.4em;
+  color: white;
+}
+.nav-lg{
+  float: right;
+}
+.nav-lg>li{
+  float: left;
+  margin-left: 3em;
+}
+.nav-lg>li>a{
+  color: white;
+}
+.dropdown{
+  position: relative;
+}
+.dropdown:hover{
+  .nav-lg-sub{
+    display: block;
+  }
+}
+.header-login{
+  border: 1px solid white;
+  border-radius: 1em;
+  padding: 1em 1em;
+}
+.nav-lg-sub{
+  display: none;
+  position: absolute;
+  top: 6em;
+
+  min-width: 10em;
+  line-height: 2em;
+
+  padding: 0.5em 1em;
+
+  background-color: $base-color;
+
+  border-radius: 0.5em;
+
+  z-index: 1001; // 防止被其他元素挡住
+}
+.nav-lg-sub:hover{
+  display: block;
+}
+.nav-lg-sub li{
+  border-bottom: 1px solid #222;
+}
+.nav-lg-sub a{
+  color: white;
+  padding: 0 1em;
+  text-align: center;
+}
+// 下拉列表的小三角
+.nav-lg-sub:before{
+  position: absolute;
+  top: -2em;
+  left: 3em;
+
+  // 内容一定要为空
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom: 1em solid $base-color;
+}
+
+.menuBut{
+  float: right;
+
+  font-size: 1em;
+
+  color: white;
+  cursor: pointer;
+}
+.nav-sm{
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  width: 70%;
+
+  line-height: 2em;
+
+  background-color: rgba(59, 59, 59, 0.8);
+
+  padding: 2em;
+
+  z-index: 100; // 防止被其他元素挡住
+}
+.nav-sm a:hover{
+  color: $base-color;
+}
+.nav-sm-cross{
+  float: right;
+
+  font-size: 1.5em;
+}
+.nav-sm-list li a{
+  color: white;
+}
+.nav-sm-list li{
+  display: block;
+
+  border-bottom: 1px solid #d6d6d6;
+
+  padding: 0.75em 0;
+}
+.depth-1>li{
+  padding-left: 2em;
+}
+
+// 小屏时使用菜单按钮，隐藏导航栏
+@media (max-width: ($screen-md - 1)) {
+  .menuBut{
+    display: inline-block;
+  }
+  .nav-lg{
+    display: none;
+  }
+}
+
+// 小屏以上时使用导航栏，隐藏菜单按钮
+@media (min-width: $screen-md) {
+  .menuBut{
+    display: none;
+  }
+  .nav-lg{
+    display: inline-block;
+  }
+}

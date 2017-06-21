@@ -1,0 +1,98 @@
+// 轮播图组件
+
+.slices{
+  position: relative;
+  z-index: 10;
+}
+//  <div class="slice">
+//  <img src="Image/slide01.jpg">
+//  <div class="slice-content">
+//  <div class="slice-content-title">Nisl sed vitae</div>
+//  <p class="slice-content-detail">
+//  Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac magna consequat purus ipsum consequat.
+//  </p>
+//  <a href="#" class="btn btn-normal btn-normal-hover">Normal</a>
+//  </div>
+//  </div>
+//  </div>
+.slice{
+  display: none;
+  // 1: 文字水平垂直居中时用到
+  position: relative; // 1
+
+  height: ($sliceHeight * 2/3);
+
+  .slice-content{
+    position: absolute; // 1
+    top: 25%; // 1
+    margin: 0 15%; // 1
+
+    width: 70%;
+    height: 50%;
+  }
+  .slice-content-title{
+    font-size: 2em;
+    color: white;
+  }
+  .slice-content-detail{
+    margin: 1em 0;
+
+    line-height: 1em;
+    color: white;
+  }
+  .btn{
+    border-color: white;
+    color: white;
+    &:hover{
+      border-color: $base-color;
+    }
+  }
+}
+.slice:nth-of-type(1){
+  display: block;
+}
+//<div class="slices-btns">
+//<span class="slices-btn"></span>
+//<span class="slices-btn"></span>
+//<span class="slices-btn"></span>
+//<span class="slices-btn"></span>
+//</div>
+.slices-btns{
+  position: absolute;
+  left: 50%;
+  bottom: 1em;
+  margin-left: -((7*$slices-btn-width) / 2);
+
+  padding: 0;
+
+  .slices-btn{
+    display: inline-block;
+    margin-right: $slices-btn-width;
+
+    content: "";
+    width: $slices-btn-width;
+    height: $slices-btn-width;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: $formEleBackColor;
+    cursor: pointer;
+  }
+  .slices-btn:first-of-type{
+    background-color: white;
+  }
+  .slices-btn:last-of-type{
+    margin-right: 0;
+  }
+  //.slices-btn:hover{
+  //  background-color: white;
+  //}
+}
+
+@media (min-width: $screen-md - 1) {
+  .slices{
+    padding: 0 15%;
+  }
+  .slice{
+    height: $sliceHeight;
+  }
+}

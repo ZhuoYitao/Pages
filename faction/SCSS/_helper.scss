@@ -1,0 +1,63 @@
+// 这里记录了在本项目中可能被重复用到，但又不能独立为一个组件的类
+
+//--其他项目中也可能用到的类--
+// 清除浮动
+.clearFloat {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// 用于修饰ul
+.nav-like{
+  padding-left: 0;
+  li {
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
+.botBorder{
+  border-bottom: 1px solid $border-color;
+}
+
+.botMargin-2em{
+  margin-bottom: 2em;
+}
+
+.rightMargin-1em{
+  margin-right: 1em;
+}
+
+.margin-auto{
+  margin: 0 auto;
+}
+
+//--其他项目中不大可能用到的类--
+
+// 放icon的容器
+.icons i{
+  color: $base-color;
+  margin-right: 1em;
+}
+
+// 展示用的列表
+.lis-display{
+  margin-bottom: 1em;
+}
+
+.alternate>li{
+  @extend .botBorder;
+  padding: 0.5em 0;
+}
+
+.alternate>li:last-child{
+  border-bottom: none;
+}

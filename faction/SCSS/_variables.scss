@@ -1,0 +1,63 @@
+// 变量
+
+//--Media queries breakpoints--
+// 超小屏幕（手机）
+$screen-xs: 480px !default;
+
+// 小型屏幕（平板）
+$screen-sm: 768px !default;
+
+// 中型屏幕（电脑）
+$screen-md: 930px !default;
+
+// 大型屏幕
+$screen-lg: 1200px !default;
+
+//--网格系统--
+// 最大列数
+$grid-columns: 12 !default;
+
+// 列与列之间的距离
+$grid-gutter-width: 30px !default;
+
+// 菜单按钮展开成导航栏时的最小宽度
+$grid-menu-uncollapsed: $screen-sm !default;
+
+// 导航栏收缩成菜单按钮时的最大宽度
+$grid-menu-collapsed: $screen-sm !default;
+
+//--容器的大小--
+// 超小型屏幕因为不知道屏幕会有多小，所以不设置固定宽度
+// 小型屏幕
+$container-sm: (720px + $grid-gutter-width) !default;
+
+// 中型屏幕
+$container-md: (890px + $grid-gutter-width) !default;
+
+// 大型屏幕
+$container-lg: (1140px + $grid-gutter-width) !default;
+
+//--颜色--
+$base-color: #3ed8c4;
+$base-color-light: lighten(#2ebfac, 10%);
+$base-color-dark: darken(#2ebfac, 10%);
+$base-font-color: #888;
+$body-color: #f5f5f5;
+$container-color: #fff;
+$border-color: rgba(144,144,144,0.25);
+$disabled-color: #ddd;
+$formEleBackColor: rgba(144, 144, 144, 0.075);
+$formEleBorderColor: rgba(144, 144, 144, 0.25);;
+
+//--表单--
+// 表单元素的高度（和行高）
+$formElementHeight: 2.5em;
+// 表单元素水平方向的padding
+$formElementHorPadding: 1em;
+
+// footer的垂直padding
+$footer-vPadding: 3em;
+
+// 轮播图图片高度
+$sliceHeight: 30em;
+$slices-btn-width: 0.5em; // 轮播图下面的选图按钮的宽度（和高度）
